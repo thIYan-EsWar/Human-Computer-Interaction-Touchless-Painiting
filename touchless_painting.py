@@ -45,7 +45,7 @@ def touchless_paint(image, x, y, r):
 	with open('tools.yaml', 'r') as file:
 		dictionary = yaml.load(file, Loader=yaml.loader.BaseLoader)
 		if dictionary:
-			blue, green, red = map(int, dictionary['color'])
+			red, blue, green = map(int, dictionary['color'])
 		else:
 			blue, green, red = 0, 0, 0
 	if not erase: 
